@@ -14,6 +14,7 @@
 | tmux | [Installation](#tmux-theme) |
 | Ghostty | [Installation](#ghostty-theme) |
 | Starship | [Installation](#starship-prompt) |
+| Termux | [Installation](#termux-theme) |
 | VSCode | [Installation](#vscode-theme) |
 | ChatGPT | [Install with Stylus](#userstyles-chatgpt--claude) |
 | Claude | [Install with Stylus](#userstyles-chatgpt--claude) |
@@ -181,6 +182,38 @@ Three palettes: `cyberpunk_storm`, `cyberpunk_neon`, `cyberpunk_night` — swap 
 - Language versions: Rust, Go, Python, Node, Lua
 - Vim mode indicator (NORMAL / INSERT / VISUAL)
 - Command duration timer
+
+### Termux Theme
+
+Termux color schemes are plain properties files — no extra setup needed.
+
+**Install via the wizard:**
+
+```bash
+cd cyberpunk-theme/installer
+node index.js   # select "Termux"
+```
+
+**Manual:**
+
+```bash
+# Active scheme (pick one)
+cp extras/termux/"Cyberpunk Storm.properties" ~/.termux/colors.properties
+# or: Cyberpunk Night.properties, Cyberpunk Neon.properties
+
+# Optional: install all three into the app's scheme picker
+mkdir -p ~/.termux/colors
+cp extras/termux/*.properties ~/.termux/colors/
+```
+
+Then reload the colors:
+
+```bash
+termux-reload-settings
+# or restart the Termux app
+```
+
+**Variants:** `storm` (default) | `night` (muted) | `neon` (max saturation)
 
 ### Claude Code Statusline
 
